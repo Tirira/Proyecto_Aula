@@ -30,10 +30,10 @@ public class gestionarLectores extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnSalirGL = new javax.swing.JButton();
+        btnRegresarGL = new javax.swing.JButton();
+        txtEditarUsuarioGL = new javax.swing.JButton();
+        btnEliminarUsuarioGL = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
 
@@ -52,13 +52,13 @@ public class gestionarLectores extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton2.setText("SALIR");
+        btnSalirGL.setText("SALIR");
 
-        jButton3.setText("REGRESAR");
+        btnRegresarGL.setText("REGRESAR");
 
-        jButton4.setText("EDITAR USUARIO");
+        txtEditarUsuarioGL.setText("EDITAR USUARIO");
 
-        jButton5.setText("ELIMINAR USUARIO");
+        btnEliminarUsuarioGL.setText("ELIMINAR USUARIO");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,18 +68,18 @@ public class gestionarLectores extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton3)
+                        .addComponent(btnRegresarGL)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2))
+                        .addComponent(btnSalirGL))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(132, 132, 132)
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton4)
+                        .addComponent(txtEditarUsuarioGL)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5)))
+                        .addComponent(btnEliminarUsuarioGL)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -93,14 +93,14 @@ public class gestionarLectores extends javax.swing.JInternalFrame {
                 .addComponent(jLabel1)
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
+                    .addComponent(txtEditarUsuarioGL)
+                    .addComponent(btnEliminarUsuarioGL))
                 .addGap(24, 24, 24)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(btnSalirGL)
+                    .addComponent(btnRegresarGL))
                 .addContainerGap())
         );
 
@@ -109,13 +109,13 @@ public class gestionarLectores extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEliminarUsuarioGL;
+    private javax.swing.JButton btnRegresarGL;
+    private javax.swing.JButton btnSalirGL;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton txtEditarUsuarioGL;
     // End of variables declaration//GEN-END:variables
 }

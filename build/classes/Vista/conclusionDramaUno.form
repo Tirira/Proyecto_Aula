@@ -126,9 +126,9 @@
                   <Component id="jPanel9" alignment="0" max="32767" attributes="0"/>
                   <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnRegresarCDU" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSalirCDU" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -153,8 +153,8 @@
               <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSalirCDU" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRegresarCDU" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -233,15 +233,15 @@
         <Property name="text" type="java.lang.String" value="Y ASI TERMINA ESTA DRAMATICA HISTORIA ..."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="btnSalirCDU">
       <Properties>
         <Property name="text" type="java.lang.String" value="SALIR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirCDUActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="btnRegresarCDU">
       <Properties>
         <Property name="text" type="java.lang.String" value="REGRESAR"/>
       </Properties>

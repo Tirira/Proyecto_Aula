@@ -30,8 +30,8 @@ public class conclusionTerrorDos extends javax.swing.JInternalFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnSalirCTD = new javax.swing.JButton();
+        btnRegresarCTD = new javax.swing.JButton();
 
         jLabel1.setText("Y ASI TERMINA ESTA TERRIBLE HISTORIA ...");
 
@@ -74,9 +74,9 @@ public class conclusionTerrorDos extends javax.swing.JInternalFrame {
             .addGap(0, 91, Short.MAX_VALUE)
         );
 
-        jButton1.setText("SALIR");
+        btnSalirCTD.setText("SALIR");
 
-        jButton2.setText("REGRESAR");
+        btnRegresarCTD.setText("REGRESAR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,9 +96,9 @@ public class conclusionTerrorDos extends javax.swing.JInternalFrame {
                         .addComponent(jLabel1)
                         .addGap(79, 79, 79))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(btnRegresarCTD)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(btnSalirCTD)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -114,8 +114,8 @@ public class conclusionTerrorDos extends javax.swing.JInternalFrame {
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnSalirCTD)
+                    .addComponent(btnRegresarCTD))
                 .addContainerGap())
         );
 
@@ -124,8 +124,8 @@ public class conclusionTerrorDos extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnRegresarCTD;
+    private javax.swing.JButton btnSalirCTD;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
