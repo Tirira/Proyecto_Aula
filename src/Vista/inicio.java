@@ -15,6 +15,7 @@ public class inicio extends javax.swing.JFrame {
      */
     public inicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -26,22 +27,50 @@ public class inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jdpVista = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         admin = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         usuario = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        prueba = new javax.swing.JMenuItem();
+
+        jMenu1.setText("File");
+        jMenuBar2.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar2.add(jMenu2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout jdpVistaLayout = new javax.swing.GroupLayout(jdpVista);
+        jdpVista.setLayout(jdpVistaLayout);
+        jdpVistaLayout.setHorizontalGroup(
+            jdpVistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 802, Short.MAX_VALUE)
+        );
+        jdpVistaLayout.setVerticalGroup(
+            jdpVistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 470, Short.MAX_VALUE)
+        );
 
         admin.setText("ADMINISTRADOR");
 
         jMenuItem1.setText("Login");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         admin.add(jMenuItem1);
 
         jMenuBar1.add(admin);
 
-        usuario.setText("USUARIO");
+        usuario.setText("LECTOR");
 
         jMenuItem2.setText("Menú");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -53,17 +82,34 @@ public class inicio extends javax.swing.JFrame {
 
         jMenuBar1.add(usuario);
 
+        jMenu3.setText("Prueba");
+
+        prueba.setText("prueba");
+        prueba.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pruebaMouseClicked(evt);
+            }
+        });
+        prueba.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pruebaActionPerformed(evt);
+            }
+        });
+        jMenu3.add(prueba);
+
+        jMenuBar1.add(jMenu3);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jdpVista)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addComponent(jdpVista)
         );
 
         pack();
@@ -71,7 +117,32 @@ public class inicio extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+        
+        inicioSesionLector sl = new inicioSesionLector();
+        jdpVista.add(sl);
+        sl.show();
+        
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        inicioSesionAdministrador sa = new inicioSesionAdministrador();
+        jdpVista.add(sa);
+        sa.show();
+        
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void pruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pruebaMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_pruebaMouseClicked
+
+    private void pruebaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pruebaActionPerformed
+        // TODO add your handling code here:
+        prueba pa= new prueba();
+        jdpVista.add(pa);
+        pa.show();
+    }//GEN-LAST:event_pruebaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,9 +182,15 @@ public class inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu admin;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JDesktopPane jdpVista;
+    private javax.swing.JMenuItem prueba;
     private javax.swing.JMenu usuario;
     // End of variables declaration//GEN-END:variables
 }

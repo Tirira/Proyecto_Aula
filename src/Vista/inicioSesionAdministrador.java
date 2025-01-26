@@ -4,6 +4,11 @@
  */
 package Vista;
 
+import Controlador.adminControlador;
+import Modelo.administradorModelo;
+import com.mysql.cj.protocol.Message;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author HP
@@ -15,6 +20,8 @@ public class inicioSesionAdministrador extends javax.swing.JInternalFrame {
      */
     public inicioSesionAdministrador() {
         initComponents();
+         
+        
     }
 
     /**
@@ -26,104 +33,130 @@ public class inicioSesionAdministrador extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jdpInicio = new javax.swing.JDesktopPane();
+        txtEmail = new javax.swing.JTextField();
+        jblInicio = new javax.swing.JLabel();
+        pwdContra = new javax.swing.JPasswordField();
+        jblEmail = new javax.swing.JLabel();
+        btnIngresar = new javax.swing.JButton();
+        jblContra = new javax.swing.JLabel();
 
-        jButton2.setText("REGRESAR");
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
 
-        jLabel1.setText("INICIO DE SESION ");
+        jblInicio.setText("INICIO DE SESION ");
 
-        jLabel2.setText("E-MAIL:");
+        jblEmail.setText("E-MAIL:");
 
-        jLabel3.setText("CONTRASEÑA:");
-
-        jLabel4.setText("ADMINISTRADOR:");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        btnIngresar.setText("INGRESAR");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                btnIngresarActionPerformed(evt);
             }
         });
 
-        jButton1.setText("INGRESAR");
+        jblContra.setText("CONTRASEÑA:");
+
+        jdpInicio.setLayer(txtEmail, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpInicio.setLayer(jblInicio, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpInicio.setLayer(pwdContra, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpInicio.setLayer(jblEmail, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpInicio.setLayer(btnIngresar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpInicio.setLayer(jblContra, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jdpInicioLayout = new javax.swing.GroupLayout(jdpInicio);
+        jdpInicio.setLayout(jdpInicioLayout);
+        jdpInicioLayout.setHorizontalGroup(
+            jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdpInicioLayout.createSequentialGroup()
+                .addGap(256, 256, 256)
+                .addComponent(jblInicio)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
+                .addContainerGap(170, Short.MAX_VALUE)
+                .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
+                        .addComponent(btnIngresar)
+                        .addGap(354, 354, 354))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
+                        .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
+                                .addComponent(jblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(87, 87, 87))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
+                                .addComponent(jblContra)
+                                .addGap(78, 78, 78)))
+                        .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                            .addComponent(pwdContra))
+                        .addGap(162, 162, 162))))
+        );
+        jdpInicioLayout.setVerticalGroup(
+            jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jblInicio)
+                .addGap(77, 77, 77)
+                .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jblEmail)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jblContra)
+                    .addComponent(pwdContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addComponent(btnIngresar)
+                .addContainerGap(225, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(144, 144, 144)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4))
-                        .addGap(34, 34, 34)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField3))))
-                .addGap(27, 27, 27))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(jdpInicio)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap())
+            .addComponent(jdpInicio, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+        adminControlador admin = new adminControlador();
+        String email = txtEmail.getText();
+        char[] passwordArray = pwdContra.getPassword();
+        String contraseña = new String(passwordArray);
+            if (email.isEmpty() || contraseña.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos", "Campos vacíos", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+        boolean autenticado = admin.verificarCredenciales(email, contraseña);
+        if (autenticado) {
+            menuAdmin ma = new menuAdmin();
+            jdpInicio.add(ma);  
+            ma.setVisible(true);  
+           
+    } else {
+        JOptionPane.showMessageDialog(this, "Correo/Contraseña Incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton btnIngresar;
+    private javax.swing.JLabel jblContra;
+    private javax.swing.JLabel jblEmail;
+    private javax.swing.JLabel jblInicio;
+    private javax.swing.JDesktopPane jdpInicio;
+    private javax.swing.JPasswordField pwdContra;
+    private javax.swing.JTextField txtEmail;
     // End of variables declaration//GEN-END:variables
 }

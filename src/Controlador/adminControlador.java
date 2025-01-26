@@ -5,7 +5,9 @@
 package Controlador;
 
 import java.sql.Connection;
-
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
 /**
  *
  * @author Tiririn
@@ -19,6 +21,20 @@ public class adminControlador {
         conectado = conexion.conectar();
     }
 
+    public boolean verificarCredenciales(String email, String contraseña) {
+    String sql = "SELECT * FROM persona WHERE emaill = ? AND contraseña = ?";
+    try (PreparedStatement stmt = conectado.prepareStatement(sql)) {
+        stmt.setString(1, email);
+        stmt.setString(2, contraseña);
+        ResultSet rs = stmt.executeQuery();
+        
+        return rs.next(); 
+    } catch (SQLException e) {
+        System.err.println("Error al verificar credenciales: " + e.getMessage());
+        return false;
+    }
     
+}
+
 }
 
