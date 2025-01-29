@@ -1,4 +1,4 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
@@ -15,8 +15,13 @@ public class menuAdmin extends javax.swing.JInternalFrame {
      */
     public menuAdmin() {
         initComponents();
+        
     }
+    
+        public void mostrarMenuAdmin() {
 
+
+       }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,29 +31,80 @@ public class menuAdmin extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        jdpmenuAdmin = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnGesionarU = new javax.swing.JButton();
+        btnGestionarH = new javax.swing.JButton();
+        btnGestionarP = new javax.swing.JButton();
+        btnSalirMA = new javax.swing.JButton();
 
-        jButton1.setText("GESTIONAR USUARIOS");
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
 
         jLabel1.setText("QUE ACCIÓN DESEA REALIZAR?");
 
-        jButton2.setText("GESTIONAR PARAMETROS");
+        btnGesionarU.setText("GESTIONAR USUARIOS");
 
-        jButton3.setText("SALIR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnGestionarH.setText("GESTIONAR HISTORIAS");
+
+        btnGestionarP.setText("GESTIONAR PARAMETROS");
+
+        btnSalirMA.setText("SALIR");
+        btnSalirMA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnSalirMAActionPerformed(evt);
             }
         });
 
-        jButton4.setText("REGRESAR");
+        jdpmenuAdmin.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpmenuAdmin.setLayer(btnGesionarU, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpmenuAdmin.setLayer(btnGestionarH, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpmenuAdmin.setLayer(btnGestionarP, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpmenuAdmin.setLayer(btnSalirMA, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jButton5.setText("GESTIONAR HISTORIAS");
+        javax.swing.GroupLayout jdpmenuAdminLayout = new javax.swing.GroupLayout(jdpmenuAdmin);
+        jdpmenuAdmin.setLayout(jdpmenuAdminLayout);
+        jdpmenuAdminLayout.setHorizontalGroup(
+            jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdpmenuAdminLayout.createSequentialGroup()
+                .addGroup(jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnGestionarH)
+                    .addGroup(jdpmenuAdminLayout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(jLabel1)
+                        .addGap(90, 90, 90)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jdpmenuAdminLayout.createSequentialGroup()
+                .addGap(125, 125, 125)
+                .addComponent(btnGestionarP)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpmenuAdminLayout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addGroup(jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpmenuAdminLayout.createSequentialGroup()
+                        .addComponent(btnGesionarU)
+                        .addGap(256, 256, 256))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpmenuAdminLayout.createSequentialGroup()
+                        .addComponent(btnSalirMA)
+                        .addGap(18, 18, 18))))
+        );
+        jdpmenuAdminLayout.setVerticalGroup(
+            jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdpmenuAdminLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(56, 56, 56)
+                .addGroup(jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGesionarU)
+                    .addComponent(btnGestionarH))
+                .addGap(56, 56, 56)
+                .addComponent(btnGestionarP)
+                .addGap(18, 18, 18)
+                .addComponent(btnSalirMA)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -56,58 +112,35 @@ public class menuAdmin extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(113, 113, 113))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addContainerGap())))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addComponent(jButton5)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jdpmenuAdmin)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1)
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(18, 18, 18)
-                .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                .addContainerGap()
+                .addComponent(jdpmenuAdmin)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnSalirMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirMAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        inicioSesionAdministrador sa = new inicioSesionAdministrador();
+        sa.setVisible(true);
+        sa.show();
+        
+    }//GEN-LAST:event_btnSalirMAActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btnGesionarU;
+    private javax.swing.JButton btnGestionarH;
+    private javax.swing.JButton btnGestionarP;
+    private javax.swing.JButton btnSalirMA;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JDesktopPane jdpmenuAdmin;
     // End of variables declaration//GEN-END:variables
 }

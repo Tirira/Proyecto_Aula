@@ -12,21 +12,18 @@ import java.util.Date;
  */
 public class administradorModelo extends personaModelo{
    private int id;
-    private String cargo;
     private Date horarioAtencion;
 
     public administradorModelo() {
     }
 
-    public administradorModelo(int id, String cargo, Date horarioAtencion) {
+    public administradorModelo(int id, Date horarioAtencion) {
         this.id = id;
-        this.cargo = cargo;
         this.horarioAtencion = horarioAtencion;
     }   
 
     public administradorModelo(int id, String cedula, String nombre, String apellido, int edad, String email, String contrasena, String cargo, Date horarioAtencion) {
     super(id, cedula, nombre, apellido, edad, email, contrasena);
-    this.cargo = cargo;
     this.horarioAtencion = horarioAtencion;
 }
 
@@ -34,7 +31,6 @@ public class administradorModelo extends personaModelo{
 public String toString() {
     return "Administrador: { " +
            "ID: " + id +
-           ", Cargo: '" + cargo + '\'' +
            ", Horario de Atención: " + horarioAtencion +
            ", Detalles: " + super.toString() +
            " }";

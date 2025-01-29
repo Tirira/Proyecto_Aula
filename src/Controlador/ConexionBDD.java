@@ -19,7 +19,7 @@ java.sql.Connection conexion;
            
             Class.forName("com.mysql.cj.jdbc.Driver");
             
-            conexion=DriverManager.getConnection("jdbc:mysql://localhost/ sistema_cuentos?autoReconnect=true&useSSL=false","root","root");
+           conexion = DriverManager.getConnection("jdbc:mysql://localhost/sistema_cuentos?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true", "root", "root");
             System.out.println("CONECTADO"); 
         } catch (ClassNotFoundException | SQLException e)
         {

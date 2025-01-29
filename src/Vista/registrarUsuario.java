@@ -37,8 +37,8 @@ public class registrarUsuario extends javax.swing.JInternalFrame {
         jTextField4 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnRegistrarRU = new javax.swing.JButton();
+        btnRegresarRU = new javax.swing.JButton();
 
         jLabel1.setText("DATOS PERSONALES ");
 
@@ -52,12 +52,12 @@ public class registrarUsuario extends javax.swing.JInternalFrame {
 
         jLabel6.setText("CONTRASEÑA:");
 
-        jButton1.setText("REGISTRAR");
+        btnRegistrarRU.setText("REGISTRAR");
 
-        jButton2.setText("REGRESAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnRegresarRU.setText("REGRESAR");
+        btnRegresarRU.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnRegresarRUActionPerformed(evt);
             }
         });
 
@@ -89,9 +89,9 @@ public class registrarUsuario extends javax.swing.JInternalFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton2)
+                        .addComponent(btnRegresarRU)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addComponent(btnRegistrarRU)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(131, 131, 131)
@@ -125,22 +125,22 @@ public class registrarUsuario extends javax.swing.JInternalFrame {
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(btnRegresarRU)
+                    .addComponent(btnRegistrarRU))
                 .addGap(14, 14, 14))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnRegresarRUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarRUActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnRegresarRUActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnRegistrarRU;
+    private javax.swing.JButton btnRegresarRU;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

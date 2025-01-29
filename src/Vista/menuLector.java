@@ -26,19 +26,19 @@ public class menuLector extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnCrearHistoria = new javax.swing.JButton();
+        btnMisHostorias = new javax.swing.JButton();
+        btnSalirML = new javax.swing.JButton();
+        btnRegresarML = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        jButton1.setText("CREAR HISTORIA ");
+        btnCrearHistoria.setText("CREAR HISTORIA ");
 
-        jButton2.setText("MIS HISTORIAS ");
+        btnMisHostorias.setText("MIS HISTORIAS ");
 
-        jButton3.setText("SALIR");
+        btnSalirML.setText("SALIR");
 
-        jButton4.setText("REGRESAR");
+        btnRegresarML.setText("REGRESAR");
 
         jLabel1.setText("QUE ACCIÓN DESEA REALIZAR");
 
@@ -50,16 +50,16 @@ public class menuLector extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton4)
+                        .addComponent(btnRegresarML)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3))
+                        .addComponent(btnSalirML))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(45, 45, 45)
-                                .addComponent(jButton1)
+                                .addComponent(btnCrearHistoria)
                                 .addGap(57, 57, 57)
-                                .addComponent(jButton2))
+                                .addComponent(btnMisHostorias))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(107, 107, 107)
                                 .addComponent(jLabel1)))
@@ -73,12 +73,12 @@ public class menuLector extends javax.swing.JInternalFrame {
                 .addComponent(jLabel1)
                 .addGap(96, 96, 96)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnCrearHistoria)
+                    .addComponent(btnMisHostorias))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(btnSalirML)
+                    .addComponent(btnRegresarML))
                 .addContainerGap())
         );
 
@@ -87,10 +87,10 @@ public class menuLector extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnCrearHistoria;
+    private javax.swing.JButton btnMisHostorias;
+    private javax.swing.JButton btnRegresarML;
+    private javax.swing.JButton btnSalirML;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
