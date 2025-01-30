@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import Controlador.adminControlador;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author HP
@@ -15,6 +18,7 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
      */
     public inicioSesionLector() {
         initComponents();
+        
     }
 
     /**
@@ -26,7 +30,7 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jdpinicio = new javax.swing.JDesktopPane();
         btnCrearUsuario = new javax.swing.JButton();
         jblTitulo = new javax.swing.JLabel();
         btnIngresarUsuario = new javax.swing.JButton();
@@ -34,7 +38,7 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
         btnRegresarISL = new javax.swing.JButton();
         jblContra = new javax.swing.JLabel();
         jblEmail = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        pwdcontra = new javax.swing.JPasswordField();
 
         setClosable(true);
         setIconifiable(true);
@@ -63,66 +67,59 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
 
         jblEmail.setText("E-MAIL:");
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
-            }
-        });
+        jdpinicio.setLayer(btnCrearUsuario, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpinicio.setLayer(jblTitulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpinicio.setLayer(btnIngresarUsuario, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpinicio.setLayer(txtEmail, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpinicio.setLayer(btnRegresarISL, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpinicio.setLayer(jblContra, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpinicio.setLayer(jblEmail, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpinicio.setLayer(pwdcontra, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jDesktopPane1.setLayer(btnCrearUsuario, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jblTitulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(btnIngresarUsuario, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(txtEmail, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(btnRegresarISL, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jblContra, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jblEmail, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jPasswordField1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jdpinicioLayout = new javax.swing.GroupLayout(jdpinicio);
+        jdpinicio.setLayout(jdpinicioLayout);
+        jdpinicioLayout.setHorizontalGroup(
+            jdpinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdpinicioLayout.createSequentialGroup()
+                .addGroup(jdpinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jdpinicioLayout.createSequentialGroup()
                         .addGap(59, 59, 59)
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jdpinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jblContra)
                             .addComponent(jblEmail)
                             .addComponent(btnCrearUsuario))
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGroup(jdpinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jdpinicioLayout.createSequentialGroup()
                                 .addGap(56, 56, 56)
                                 .addComponent(btnIngresarUsuario)
                                 .addGap(63, 63, 63)
                                 .addComponent(btnRegresarISL))
-                            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                            .addGroup(jdpinicioLayout.createSequentialGroup()
                                 .addGap(25, 25, 25)
-                                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                                .addGroup(jdpinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                    .addComponent(pwdcontra)))))
+                    .addGroup(jdpinicioLayout.createSequentialGroup()
                         .addGap(191, 191, 191)
                         .addComponent(jblTitulo)))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+        jdpinicioLayout.setVerticalGroup(
+            jdpinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jdpinicioLayout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(jblTitulo)
                 .addGap(63, 63, 63)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jdpinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jblEmail)
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jblContra)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jdpinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jblContra)
+                    .addGroup(jdpinicioLayout.createSequentialGroup()
+                        .addComponent(pwdcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79)
+                        .addGroup(jdpinicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnIngresarUsuario)
                             .addComponent(btnCrearUsuario)
                             .addComponent(btnRegresarISL))))
@@ -135,12 +132,12 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jDesktopPane1)
+                .addComponent(jdpinicio)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jdpinicio)
         );
 
         pack();
@@ -152,22 +149,35 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
 
     private void btnIngresarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarUsuarioActionPerformed
         // TODO add your handling code here:
+        adminControlador admin = new adminControlador();
+        String email = txtEmail.getText();
+        char[] passwordArray = pwdcontra.getPassword();
+        String contraseña = new String(passwordArray);
+            if (email.isEmpty() || contraseña.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos", "Campos vacíos", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+        boolean autenticado = admin.verificarCredenciales(email, contraseña);
+        if (autenticado) {
+            menuLector ml = new menuLector();
+            jdpinicio.add(ml);  
+            ml.setVisible(true);  
+           
+    } else {
+        JOptionPane.showMessageDialog(this, "Correo/Contraseña Incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+    }
     }//GEN-LAST:event_btnIngresarUsuarioActionPerformed
-
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrearUsuario;
     private javax.swing.JButton btnIngresarUsuario;
     private javax.swing.JButton btnRegresarISL;
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel jblContra;
     private javax.swing.JLabel jblEmail;
     private javax.swing.JLabel jblTitulo;
+    private javax.swing.JDesktopPane jdpinicio;
+    private javax.swing.JPasswordField pwdcontra;
     private javax.swing.JTextField txtEmail;
     // End of variables declaration//GEN-END:variables
 }

@@ -26,71 +26,74 @@ public class menuLector extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnCrearHistoria = new javax.swing.JButton();
-        btnMisHostorias = new javax.swing.JButton();
-        btnSalirML = new javax.swing.JButton();
-        btnRegresarML = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jdpmenuLector = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        mncrearHistoria = new javax.swing.JMenu();
+        jmtcrear = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jmtmirar = new javax.swing.JMenuItem();
 
-        btnCrearHistoria.setText("CREAR HISTORIA ");
+        javax.swing.GroupLayout jdpmenuLectorLayout = new javax.swing.GroupLayout(jdpmenuLector);
+        jdpmenuLector.setLayout(jdpmenuLectorLayout);
+        jdpmenuLectorLayout.setHorizontalGroup(
+            jdpmenuLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 606, Short.MAX_VALUE)
+        );
+        jdpmenuLectorLayout.setVerticalGroup(
+            jdpmenuLectorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
+        );
 
-        btnMisHostorias.setText("MIS HISTORIAS ");
+        mncrearHistoria.setText("Crear Historia");
 
-        btnSalirML.setText("SALIR");
+        jmtcrear.setText("Crear");
+        jmtcrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmtcrearActionPerformed(evt);
+            }
+        });
+        mncrearHistoria.add(jmtcrear);
 
-        btnRegresarML.setText("REGRESAR");
+        jMenuBar1.add(mncrearHistoria);
 
-        jLabel1.setText("QUE ACCIÓN DESEA REALIZAR");
+        jMenu2.setText("Mirar Historias");
+
+        jmtmirar.setText("Mirar Historiaas creadas");
+        jMenu2.add(jmtmirar);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnRegresarML)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSalirML))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(btnCrearHistoria)
-                                .addGap(57, 57, 57)
-                                .addComponent(btnMisHostorias))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(107, 107, 107)
-                                .addComponent(jLabel1)))
-                        .addGap(0, 50, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addComponent(jdpmenuLector)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(96, 96, 96)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCrearHistoria)
-                    .addComponent(btnMisHostorias))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSalirML)
-                    .addComponent(btnRegresarML))
-                .addContainerGap())
+            .addComponent(jdpmenuLector)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jmtcrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmtcrearActionPerformed
+        // TODO add your handling code here:
+             parametrosHistoria crear= new parametrosHistoria();
+            jdpmenuLector.add(crear);
+             crear.show();
+            
+    }//GEN-LAST:event_jmtcrearActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCrearHistoria;
-    private javax.swing.JButton btnMisHostorias;
-    private javax.swing.JButton btnRegresarML;
-    private javax.swing.JButton btnSalirML;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JDesktopPane jdpmenuLector;
+    private javax.swing.JMenuItem jmtcrear;
+    private javax.swing.JMenuItem jmtmirar;
+    private javax.swing.JMenu mncrearHistoria;
     // End of variables declaration//GEN-END:variables
 }

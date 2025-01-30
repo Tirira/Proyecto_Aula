@@ -107,6 +107,11 @@ public class inicio extends javax.swing.JFrame {
         usuario.add(jMenuItem2);
 
         jMenuItem4.setText("Menú de Lector");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         usuario.add(jMenuItem4);
 
         jMenuBar1.add(usuario);
@@ -192,6 +197,13 @@ public class inicio extends javax.swing.JFrame {
        jdpVista.add(mu);
         mu.show();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+      menuLector ml= new menuLector();
+       jdpVista.add(ml);
+        ml.show();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -20,6 +20,7 @@ public class inicioSesionAdministrador extends javax.swing.JInternalFrame {
      */
     public inicioSesionAdministrador() {
         initComponents();
+        
          
         
     }
