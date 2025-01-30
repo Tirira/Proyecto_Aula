@@ -61,17 +61,22 @@ public class inicio extends javax.swing.JFrame {
         jdpVistaLayout.setHorizontalGroup(
             jdpVistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jdpVistaLayout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 647, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 607, Short.MAX_VALUE))
         );
         jdpVistaLayout.setVerticalGroup(
             jdpVistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jdpVistaLayout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 327, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 231, Short.MAX_VALUE))
         );
 
         admin.setText("ADMINISTRADOR");
+        admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setText("Inicio Sesión");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -82,6 +87,11 @@ public class inicio extends javax.swing.JFrame {
         admin.add(jMenuItem1);
 
         jMenuItem3.setText("Menú de Administrador");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         admin.add(jMenuItem3);
 
         jMenuBar1.add(admin);
@@ -165,15 +175,23 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_pruebaMouseClicked
 
     private void pruebaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pruebaActionPerformed
-        // TODO add your handling code here:
-        prueba pa= new prueba();
-        jdpVista.add(pa);
-        pa.show();
+
     }//GEN-LAST:event_pruebaActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_adminActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+       menuAdmin mu= new menuAdmin();
+       jdpVista.add(mu);
+        mu.show();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments

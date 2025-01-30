@@ -26,6 +26,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="ADMINISTRADOR"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adminActionPerformed"/>
+          </Events>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
@@ -39,6 +42,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Men&#xfa; de Administrador"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem3ActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -128,16 +134,16 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="647" max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="195" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="607" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="327" max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="239" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="231" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

@@ -31,80 +31,53 @@ public class menuAdmin extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jdpmenuAdmin = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
-        btnGesionarU = new javax.swing.JButton();
-        btnGestionarH = new javax.swing.JButton();
-        btnGestionarP = new javax.swing.JButton();
-        btnSalirMA = new javax.swing.JButton();
+        jdpmenu = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jmtagregaar = new javax.swing.JMenuItem();
+        jmtelliminar = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
 
-        jLabel1.setText("QUE ACCIÓN DESEA REALIZAR?");
+        javax.swing.GroupLayout jdpmenuLayout = new javax.swing.GroupLayout(jdpmenu);
+        jdpmenu.setLayout(jdpmenuLayout);
+        jdpmenuLayout.setHorizontalGroup(
+            jdpmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 981, Short.MAX_VALUE)
+        );
+        jdpmenuLayout.setVerticalGroup(
+            jdpmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 565, Short.MAX_VALUE)
+        );
 
-        btnGesionarU.setText("GESTIONAR USUARIOS");
+        jMenu1.setText("Administar Lectores");
 
-        btnGestionarH.setText("GESTIONAR HISTORIAS");
-
-        btnGestionarP.setText("GESTIONAR PARAMETROS");
-
-        btnSalirMA.setText("SALIR");
-        btnSalirMA.addActionListener(new java.awt.event.ActionListener() {
+        jmtagregaar.setText("Agregar ");
+        jmtagregaar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirMAActionPerformed(evt);
+                jmtagregaarActionPerformed(evt);
             }
         });
+        jMenu1.add(jmtagregaar);
 
-        jdpmenuAdmin.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpmenuAdmin.setLayer(btnGesionarU, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpmenuAdmin.setLayer(btnGestionarH, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpmenuAdmin.setLayer(btnGestionarP, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpmenuAdmin.setLayer(btnSalirMA, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jmtelliminar.setText("Eliminar/Modificar");
+        jmtelliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmtelliminarActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmtelliminar);
 
-        javax.swing.GroupLayout jdpmenuAdminLayout = new javax.swing.GroupLayout(jdpmenuAdmin);
-        jdpmenuAdmin.setLayout(jdpmenuAdminLayout);
-        jdpmenuAdminLayout.setHorizontalGroup(
-            jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jdpmenuAdminLayout.createSequentialGroup()
-                .addGroup(jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnGestionarH)
-                    .addGroup(jdpmenuAdminLayout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(jLabel1)
-                        .addGap(90, 90, 90)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jdpmenuAdminLayout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addComponent(btnGestionarP)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpmenuAdminLayout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addGroup(jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpmenuAdminLayout.createSequentialGroup()
-                        .addComponent(btnGesionarU)
-                        .addGap(256, 256, 256))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpmenuAdminLayout.createSequentialGroup()
-                        .addComponent(btnSalirMA)
-                        .addGap(18, 18, 18))))
-        );
-        jdpmenuAdminLayout.setVerticalGroup(
-            jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jdpmenuAdminLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(56, 56, 56)
-                .addGroup(jdpmenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGesionarU)
-                    .addComponent(btnGestionarH))
-                .addGap(56, 56, 56)
-                .addComponent(btnGestionarP)
-                .addGap(18, 18, 18)
-                .addComponent(btnSalirMA)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Administrar Parametros");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,35 +85,39 @@ public class menuAdmin extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jdpmenuAdmin)
-                .addContainerGap())
+                .addComponent(jdpmenu))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jdpmenuAdmin)
-                .addContainerGap())
+            .addComponent(jdpmenu)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSalirMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirMAActionPerformed
+    private void jmtelliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmtelliminarActionPerformed
         // TODO add your handling code here:
-        inicioSesionAdministrador sa = new inicioSesionAdministrador();
-        sa.setVisible(true);
-        sa.show();
-        
-    }//GEN-LAST:event_btnSalirMAActionPerformed
+            eliminarMoodificarLector eliminar = new eliminarMoodificarLector();
+            jdpmenu.add(eliminar);
+             eliminar.show();
+            
+    }//GEN-LAST:event_jmtelliminarActionPerformed
+
+    private void jmtagregaarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmtagregaarActionPerformed
+        // TODO add your handling code here:
+           agregarLector agregar= new agregarLector();
+            jdpmenu.add(agregar);
+             agregar.show();
+            
+    }//GEN-LAST:event_jmtagregaarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnGesionarU;
-    private javax.swing.JButton btnGestionarH;
-    private javax.swing.JButton btnGestionarP;
-    private javax.swing.JButton btnSalirMA;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JDesktopPane jdpmenuAdmin;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JDesktopPane jdpmenu;
+    private javax.swing.JMenuItem jmtagregaar;
+    private javax.swing.JMenuItem jmtelliminar;
     // End of variables declaration//GEN-END:variables
 }
