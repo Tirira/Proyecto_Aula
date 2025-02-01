@@ -12,7 +12,11 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form inicioSesionLector
+     * 
      */
+    
+    
+    
     public inicioSesionLector() {
         initComponents();
     }
