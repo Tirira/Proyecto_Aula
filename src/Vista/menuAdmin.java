@@ -1,4 +1,4 @@
-    /*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
@@ -15,13 +15,13 @@ public class menuAdmin extends javax.swing.JInternalFrame {
      */
     public menuAdmin() {
         initComponents();
-        
+
     }
-    
-        public void mostrarMenuAdmin() {
 
+    public void mostrarMenuAdmin() {
 
-       }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,12 +31,16 @@ public class menuAdmin extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         jdpmenu = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jmtagregaar = new javax.swing.JMenuItem();
-        jmtelliminar = new javax.swing.JMenuItem();
+        jmiagregar = new javax.swing.JMenuItem();
+        jmimodicar = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setClosable(true);
         setIconifiable(true);
@@ -56,25 +60,34 @@ public class menuAdmin extends javax.swing.JInternalFrame {
 
         jMenu1.setText("Administar Lectores");
 
-        jmtagregaar.setText("Agregar ");
-        jmtagregaar.addActionListener(new java.awt.event.ActionListener() {
+        jmiagregar.setText("Agregar ");
+        jmiagregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmtagregaarActionPerformed(evt);
+                jmiagregarActionPerformed(evt);
             }
         });
-        jMenu1.add(jmtagregaar);
+        jMenu1.add(jmiagregar);
 
-        jmtelliminar.setText("Eliminar/Modificar");
-        jmtelliminar.addActionListener(new java.awt.event.ActionListener() {
+        jmimodicar.setText("Modificar/Eliminar ");
+        jmimodicar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmtelliminarActionPerformed(evt);
+                jmimodicarActionPerformed(evt);
             }
         });
-        jMenu1.add(jmtelliminar);
+        jMenu1.add(jmimodicar);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Administrar Parametros");
+        jMenu2.setText("Administrar Historias");
+
+        jMenuItem2.setText("Ver historias generadas");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem2);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -95,29 +108,37 @@ public class menuAdmin extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jmtelliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmtelliminarActionPerformed
+    private void jmimodicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmimodicarActionPerformed
         // TODO add your handling code here:
-            eliminarMoodificarLector eliminar = new eliminarMoodificarLector();
-            jdpmenu.add(eliminar);
-             eliminar.show();
-            
-    }//GEN-LAST:event_jmtelliminarActionPerformed
+        eliminarMoodificarLector eliminar = new eliminarMoodificarLector();
+        jdpmenu.add(eliminar);
+        eliminar.show();
 
-    private void jmtagregaarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmtagregaarActionPerformed
+    }//GEN-LAST:event_jmimodicarActionPerformed
+
+    private void jmiagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiagregarActionPerformed
         // TODO add your handling code here:
-           agregarLector agregar= new agregarLector();
-            jdpmenu.add(agregar);
-             agregar.show();
-            
-    }//GEN-LAST:event_jmtagregaarActionPerformed
+        agregarLector agregar = new agregarLector();
+        jdpmenu.add(agregar);
+        agregar.show();
+
+    }//GEN-LAST:event_jmiagregarActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        gestionarHistorias gestionar = new gestionarHistorias();
+        jdpmenu.add(gestionar);
+        gestionar.show();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JDesktopPane jdpmenu;
-    private javax.swing.JMenuItem jmtagregaar;
-    private javax.swing.JMenuItem jmtelliminar;
+    private javax.swing.JMenuItem jmiagregar;
+    private javax.swing.JMenuItem jmimodicar;
     // End of variables declaration//GEN-END:variables
 }

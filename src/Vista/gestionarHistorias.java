@@ -31,6 +31,11 @@ public class gestionarHistorias extends javax.swing.JInternalFrame {
         btnRegresarGH = new javax.swing.JButton();
         btnSalirGH = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+
         jLabel1.setText("HISTORIAS CREADAS");
 
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
