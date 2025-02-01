@@ -22,7 +22,7 @@ public class adminControlador {
     }
 
     public boolean verificarCredenciales(String email, String contraseña) {
-    String sql = "SELECT * FROM persona WHERE emaill = ? AND contraseña = ?";
+    String sql = "SELECT * FROM persona WHERE email = ? AND contraseña = ?";
     try (PreparedStatement stmt = conectado.prepareStatement(sql)) {
         stmt.setString(1, email);
         stmt.setString(2, contraseña);
@@ -48,7 +48,7 @@ public class adminControlador {
                           + "Nombre: " + rs.getString("nombre") + "\n"
                           + "Apellido: " + rs.getString("apellido") + "\n"
                           + "Edad: " + rs.getInt("edad") + "\n"
-                          + "Email: " + rs.getString("emaill")+ "\n"
+                          + "Email: " + rs.getString("email")+ "\n"
                           + "Contraseña: " + rs.getString("contraseña");
             } else {
                 resultado = "No se encontró ningún registro con la cédula: " + cedula;
@@ -59,7 +59,7 @@ public class adminControlador {
         return resultado;
     }
   public boolean guardarDatos(String cedula, String nombre, String apellido, int edad, String email, String contraseña) {
-        String sql = "UPDATE persona SET nombre = ?, apellido = ?, edad = ?, emaill = ?, contraseña = ? WHERE cedula = ?";
+        String sql = "UPDATE persona SET nombre = ?, apellido = ?, edad = ?, email = ?, contraseña = ? WHERE cedula = ?";
         try (PreparedStatement stmt = conectado.prepareStatement(sql)) {
             stmt.setString(1, nombre);
             stmt.setString(2, apellido);
@@ -87,7 +87,7 @@ public boolean eliminarPorCedula(String cedula) {
         }
     }
 public boolean agregarLector(String cedula, String nombre, String apellido, int edad, String email, String contraseña) {
-    String sql = "INSERT INTO persona (cedula, nombre, apellido, edad, emaill, contraseña) VALUES (?, ?, ?, ?, ?, ?)";
+    String sql = "INSERT INTO persona (cedula, nombre, apellido, edad, email, contraseña) VALUES (?, ?, ?, ?, ?, ?)";
     try (PreparedStatement stmt = conectado.prepareStatement(sql)) {
         stmt.setString(1, cedula);
         stmt.setString(2, nombre);
