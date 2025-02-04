@@ -33,14 +33,14 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtPersonaje1 = new javax.swing.JTextField();
         txtPersonaje2 = new javax.swing.JTextField();
+        txtPersonaje1 = new javax.swing.JTextField();
         cmbxGenero = new javax.swing.JComboBox<>();
         btnSalirPH = new javax.swing.JButton();
         btnRegresarPH = new javax.swing.JButton();
-        btnContinuarPH1 = new javax.swing.JButton();
+        btnContinuar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cmbxEscenario = new javax.swing.JComboBox<>();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -68,12 +68,9 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
 
         jLabel4.setText("GENERO");
 
-        txtPersonaje1.setText("NOMBRE DE PERSONAJE");
-
-        txtPersonaje2.setText("NOMBRE DE PERSONAJE");
-        txtPersonaje2.addActionListener(new java.awt.event.ActionListener() {
+        txtPersonaje1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPersonaje2ActionPerformed(evt);
+                txtPersonaje1ActionPerformed(evt);
             }
         });
 
@@ -98,29 +95,34 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
             }
         });
 
-        btnContinuarPH1.setText("Continuar");
-        btnContinuarPH1.addActionListener(new java.awt.event.ActionListener() {
+        btnContinuar.setText("CONTINUAR");
+        btnContinuar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnContinuarPH1ActionPerformed(evt);
+                btnContinuarActionPerformed(evt);
             }
         });
 
         jLabel5.setText("ESCENARIO");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pueblo abandonado", "El bosque ", "El laberinto infinito" }));
+        cmbxEscenario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PUEBLO ABANDONADO", "BOSQUE", "LABERINTO INFINITO" }));
+        cmbxEscenario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbxEscenarioActionPerformed(evt);
+            }
+        });
 
         jdpParametros.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpParametros.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpParametros.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpParametros.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpParametros.setLayer(txtPersonaje1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpParametros.setLayer(txtPersonaje2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpParametros.setLayer(txtPersonaje1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpParametros.setLayer(cmbxGenero, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpParametros.setLayer(btnSalirPH, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpParametros.setLayer(btnRegresarPH, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpParametros.setLayer(btnContinuarPH1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpParametros.setLayer(btnContinuar, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpParametros.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jdpParametros.setLayer(jComboBox2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpParametros.setLayer(cmbxEscenario, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jdpParametrosLayout = new javax.swing.GroupLayout(jdpParametros);
         jdpParametros.setLayout(jdpParametrosLayout);
@@ -131,10 +133,10 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
                     .addGroup(jdpParametrosLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnSalirPH)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                         .addComponent(btnRegresarPH)
                         .addGap(83, 83, 83)
-                        .addComponent(btnContinuarPH1))
+                        .addComponent(btnContinuar))
                     .addGroup(jdpParametrosLayout.createSequentialGroup()
                         .addGroup(jdpParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jdpParametrosLayout.createSequentialGroup()
@@ -143,7 +145,7 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jdpParametrosLayout.createSequentialGroup()
                                         .addComponent(jLabel1)
                                         .addGap(107, 107, 107)
-                                        .addComponent(txtPersonaje2, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtPersonaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jdpParametrosLayout.createSequentialGroup()
                                         .addGroup(jdpParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel3)
@@ -151,14 +153,14 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
                                             .addComponent(jLabel5))
                                         .addGap(107, 107, 107)
                                         .addGroup(jdpParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtPersonaje1, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                                            .addComponent(txtPersonaje2, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
                                             .addComponent(cmbxGenero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                            .addComponent(cmbxEscenario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                             .addGroup(jdpParametrosLayout.createSequentialGroup()
                                 .addGap(236, 236, 236)
                                 .addComponent(jLabel2)))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jdpParametrosLayout.setVerticalGroup(
             jdpParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,11 +170,11 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
                 .addGap(11, 11, 11)
                 .addGroup(jdpParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtPersonaje2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPersonaje1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jdpParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtPersonaje1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPersonaje2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(jdpParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -180,12 +182,12 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
                 .addGap(28, 28, 28)
                 .addGroup(jdpParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbxEscenario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(jdpParametrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalirPH)
                     .addComponent(btnRegresarPH)
-                    .addComponent(btnContinuarPH1))
+                    .addComponent(btnContinuar))
                 .addContainerGap())
         );
 
@@ -203,13 +205,30 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtPersonaje2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPersonaje2ActionPerformed
+    private void txtPersonaje1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPersonaje1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPersonaje2ActionPerformed
+    }//GEN-LAST:event_txtPersonaje1ActionPerformed
 
-    private void btnContinuarPH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarPH1ActionPerformed
+    private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnContinuarPH1ActionPerformed
+        String nombrePersonaje1 = txtPersonaje1.getText();
+        String nombrePersonaje2 = txtPersonaje2.getText();
+
+        // Get the genre
+        String genero = cmbxGenero.getSelectedItem().toString();
+
+        // Get the scenario
+        String escenario = cmbxEscenario.getSelectedItem().toString();
+
+        
+        opTerrorBosque opTB = new opTerrorBosque(nombrePersonaje1, nombrePersonaje2,genero,escenario);
+
+        // Start the game
+        opTB.add(opTB);
+
+        // Close the current window
+        this.btnContinuar()
+    }//GEN-LAST:event_btnContinuarActionPerformed
 
     private void btnRegresarPHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarPHActionPerformed
         // TODO add your handling code here:
@@ -220,24 +239,35 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnRegresarPHActionPerformed
 
     private void cmbxGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbxGeneroActionPerformed
-        // TODO add your handling code here:
+
+        cmbxGenero.addItem("Terror");
+        cmbxGenero.addItem("Drama");
+        cmbxGenero.addItem("Fantasía");
 
 
     }//GEN-LAST:event_cmbxGeneroActionPerformed
 
     private void btnSalirPHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirPHActionPerformed
         // TODO add your handling code here:
-      
+
     }//GEN-LAST:event_btnSalirPHActionPerformed
+
+    private void cmbxEscenarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbxEscenarioActionPerformed
+
+        cmbxEscenario.addItem("Pueblo abandonado");
+        cmbxEscenario.addItem("Bosque");
+        cmbxEscenario.addItem("Laberinto infinito");
+
+    }//GEN-LAST:event_cmbxEscenarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnContinuarPH1;
+    private javax.swing.JButton btnContinuar;
     private javax.swing.JButton btnRegresarPH;
     private javax.swing.JButton btnSalirPH;
+    private javax.swing.JComboBox<String> cmbxEscenario;
     private javax.swing.JComboBox<String> cmbxGenero;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
