@@ -37,9 +37,23 @@ public class menuLector extends javax.swing.JInternalFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+
         btnSalirML.setText("SALIR");
+        btnSalirML.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirMLActionPerformed(evt);
+            }
+        });
 
         btnRegresarML.setText("REGRESAR");
+        btnRegresarML.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarMLActionPerformed(evt);
+            }
+        });
 
         jDesktopPane1.setLayer(btnSalirML, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(btnRegresarML, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -49,15 +63,16 @@ public class menuLector extends javax.swing.JInternalFrame {
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(btnRegresarML)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 410, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 227, Short.MAX_VALUE)
                 .addComponent(btnSalirML)
                 .addContainerGap())
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(335, Short.MAX_VALUE)
+                .addContainerGap(228, Short.MAX_VALUE)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalirML)
                     .addComponent(btnRegresarML))
@@ -98,20 +113,39 @@ public class menuLector extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-       
-        
+    parametrosCuentos crearCuento = new parametrosCuentos();
+        jDesktopPane1.add(crearCuento);
+        crearCuento.show();
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+        verMisCuentos verCuentos = new verMisCuentos();
+        jDesktopPane1.add(verCuentos);
+        verCuentos.show();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void btnRegresarMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarMLActionPerformed
+        // TODO add your handling code here:
+        inicioSesionLector iSL = new inicioSesionLector();
+        jDesktopPane1.add(iSL);
+        iSL.show();
+    }//GEN-LAST:event_btnRegresarMLActionPerformed
+
+    private void btnSalirMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirMLActionPerformed
+        // TODO add your handling code here:
+
+        // 
+
+    }//GEN-LAST:event_btnSalirMLActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

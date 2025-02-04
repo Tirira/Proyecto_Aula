@@ -33,6 +33,7 @@ public class menuAdmin extends javax.swing.JInternalFrame {
 
         jMenuItem1 = new javax.swing.JMenuItem();
         jdpmenu = new javax.swing.JDesktopPane();
+        btnRegresarMA = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jmiagregar = new javax.swing.JMenuItem();
@@ -47,15 +48,30 @@ public class menuAdmin extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
 
+        btnRegresarMA.setText("REGRESAR");
+        btnRegresarMA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarMAActionPerformed(evt);
+            }
+        });
+
+        jdpmenu.setLayer(btnRegresarMA, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout jdpmenuLayout = new javax.swing.GroupLayout(jdpmenu);
         jdpmenu.setLayout(jdpmenuLayout);
         jdpmenuLayout.setHorizontalGroup(
             jdpmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 981, Short.MAX_VALUE)
+            .addGroup(jdpmenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnRegresarMA)
+                .addContainerGap(323, Short.MAX_VALUE))
         );
         jdpmenuLayout.setVerticalGroup(
             jdpmenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 565, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpmenuLayout.createSequentialGroup()
+                .addContainerGap(197, Short.MAX_VALUE)
+                .addComponent(btnRegresarMA)
+                .addContainerGap())
         );
 
         jMenu1.setText("Administar Lectores");
@@ -96,13 +112,13 @@ public class menuAdmin extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jdpmenu))
+            .addComponent(jdpmenu, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpmenu)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jdpmenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -125,13 +141,21 @@ public class menuAdmin extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jmiagregarActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        gestionarHistorias gestionar = new gestionarHistorias();
+        gestionarCuentos gestionar = new gestionarCuentos();
         jdpmenu.add(gestionar);
         gestionar.show();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void btnRegresarMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarMAActionPerformed
+        // TODO add your handling code here:
+        inicioSesionAdministrador iSA = new inicioSesionAdministrador();
+        jdpmenu.add(iSA);
+        iSA.show();
+    }//GEN-LAST:event_btnRegresarMAActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRegresarMA;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

@@ -8,12 +8,12 @@ package Vista;
  *
  * @author HP
  */
-public class titutoHistoria extends javax.swing.JInternalFrame {
+public class titutoCuento extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form titutoHistoria
      */
-    public titutoHistoria() {
+    public titutoCuento() {
         initComponents();
     }
 

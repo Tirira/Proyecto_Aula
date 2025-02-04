@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import java.awt.PopupMenu;
+
 /**
  *
  * @author HP
@@ -12,11 +14,8 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form inicioSesionLector
-     * 
+     *
      */
-    
-    
-    
     public inicioSesionLector() {
         initComponents();
     }
@@ -43,7 +42,6 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        setResizable(true);
 
         btnCrearUsuario.setText("NUEVO USUARIO");
         btnCrearUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +60,11 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
         });
 
         btnRegresarISL.setText("REGRESAR");
+        btnRegresarISL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarISLActionPerformed(evt);
+            }
+        });
 
         jblContra.setText("CONTRASEÑA:");
 
@@ -152,12 +155,19 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCrearUsuarioActionPerformed
 
     private void btnIngresarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarUsuarioActionPerformed
-        // TODO add your handling code here:
+        menuLector mL = new menuLector();
+        jDesktopPane1.add(mL);
+        mL.show();
     }//GEN-LAST:event_btnIngresarUsuarioActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void btnRegresarISLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarISLActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnRegresarISLActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -171,4 +181,14 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jblTitulo;
     private javax.swing.JTextField txtEmail;
     // End of variables declaration//GEN-END:variables
+
+    private static class mL {
+
+        private static boolean isShowing() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        public mL() {
+        }
+    }
 }

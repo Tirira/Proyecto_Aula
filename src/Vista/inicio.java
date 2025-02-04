@@ -32,6 +32,8 @@ public class inicio extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jdpVista = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         admin = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -54,21 +56,44 @@ public class inicio extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/a mi no me importa como seas.png"))); // NOI18N
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setText("SISTEMA DE PERSONALIZACIÓN DE CUENTOS ");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/antes y ahora.png"))); // NOI18N
+
         jdpVista.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpVista.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpVista.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jdpVistaLayout = new javax.swing.GroupLayout(jdpVista);
         jdpVista.setLayout(jdpVistaLayout);
         jdpVistaLayout.setHorizontalGroup(
             jdpVistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jdpVistaLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 607, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGroup(jdpVistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jdpVistaLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3))
+                    .addGroup(jdpVistaLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel2)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jdpVistaLayout.setVerticalGroup(
             jdpVistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jdpVistaLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 231, Short.MAX_VALUE))
+                .addGroup(jdpVistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jdpVistaLayout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
+                    .addGroup(jdpVistaLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel1)))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         admin.setText("ADMINISTRADOR");
@@ -118,7 +143,7 @@ public class inicio extends javax.swing.JFrame {
 
         jMenu3.setText("FORO DE HISTORIAS");
 
-        jMenuItem5.setText("Mis Historias");
+        jMenuItem5.setText("Mis cuentos");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -126,7 +151,7 @@ public class inicio extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem5);
 
-        prueba.setText("Historias Compartidas");
+        prueba.setText("Cuentos compartidos");
         prueba.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pruebaMouseClicked(evt);
@@ -159,11 +184,11 @@ public class inicio extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        
+
         inicioSesionLector sl = new inicioSesionLector();
         jdpVista.add(sl);
         sl.show();
-        
+
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -171,20 +196,26 @@ public class inicio extends javax.swing.JFrame {
         inicioSesionAdministrador sa = new inicioSesionAdministrador();
         jdpVista.add(sa);
         sa.show();
-        
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void pruebaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pruebaMouseClicked
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_pruebaMouseClicked
 
     private void pruebaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pruebaActionPerformed
 
+        cuentosCompartidos compartir = new cuentosCompartidos();
+        jdpVista.add(compartir);
+        compartir.show();
     }//GEN-LAST:event_pruebaActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
+        verMisCuentos verCuentos = new verMisCuentos();
+        jdpVista.add(verCuentos);
+        verCuentos.show();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminActionPerformed
@@ -193,15 +224,15 @@ public class inicio extends javax.swing.JFrame {
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
-       menuAdmin mu= new menuAdmin();
-       jdpVista.add(mu);
+        menuAdmin mu = new menuAdmin();
+        jdpVista.add(mu);
         mu.show();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add ymenuAdmin mu= new menuAdmin();
-       menuLector ml= new menuLector();
-       jdpVista.add(ml);
+        menuLector ml = new menuLector();
+        jdpVista.add(ml);
         ml.show();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
@@ -244,6 +275,8 @@ public class inicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu admin;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;

@@ -5,9 +5,8 @@
 package Vista;
 
 import Controlador.adminControlador;
-import Modelo.administradorModelo;
-import com.mysql.cj.protocol.Message;
 import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -40,6 +39,7 @@ public class inicioSesionAdministrador extends javax.swing.JInternalFrame {
         jblEmail = new javax.swing.JLabel();
         btnIngresarAdministrador = new javax.swing.JButton();
         jblContra = new javax.swing.JLabel();
+        btnRegresar = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -59,70 +59,80 @@ public class inicioSesionAdministrador extends javax.swing.JInternalFrame {
 
         jblContra.setText("CONTRASEÑA:");
 
+        btnRegresar.setText("REGRESAR");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
+
         jdpInicio.setLayer(txtEmail, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpInicio.setLayer(jblInicio, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpInicio.setLayer(pwdContra, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpInicio.setLayer(jblEmail, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpInicio.setLayer(btnIngresarAdministrador, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jdpInicio.setLayer(jblContra, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jdpInicio.setLayer(btnRegresar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jdpInicioLayout = new javax.swing.GroupLayout(jdpInicio);
         jdpInicio.setLayout(jdpInicioLayout);
         jdpInicioLayout.setHorizontalGroup(
             jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jdpInicioLayout.createSequentialGroup()
-                .addGap(256, 256, 256)
-                .addComponent(jblInicio)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
-                .addContainerGap(170, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
-                        .addComponent(btnIngresarAdministrador)
-                        .addGap(354, 354, 354))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
+                    .addGroup(jdpInicioLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
                         .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
-                                .addComponent(jblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(87, 87, 87))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
-                                .addComponent(jblContra)
-                                .addGap(78, 78, 78)))
+                            .addComponent(jblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jblContra))
+                        .addGap(68, 68, 68)
                         .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                             .addComponent(pwdContra))
-                        .addGap(162, 162, 162))))
+                        .addGap(59, 59, 59))
+                    .addGroup(jdpInicioLayout.createSequentialGroup()
+                        .addComponent(btnRegresar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnIngresarAdministrador))))
+            .addGroup(jdpInicioLayout.createSequentialGroup()
+                .addGap(209, 209, 209)
+                .addComponent(jblInicio)
+                .addContainerGap(134, Short.MAX_VALUE))
         );
         jdpInicioLayout.setVerticalGroup(
             jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jdpInicioLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(39, 39, 39)
                 .addComponent(jblInicio)
-                .addGap(77, 77, 77)
+                .addGap(29, 29, 29)
+                .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jdpInicioLayout.createSequentialGroup()
+                        .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jblEmail)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(54, 54, 54))
+                    .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jblContra)
+                        .addComponent(pwdContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(105, 105, 105)
                 .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblEmail)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(jdpInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblContra)
-                    .addComponent(pwdContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addComponent(btnIngresarAdministrador)
-                .addContainerGap(225, Short.MAX_VALUE))
+                    .addComponent(btnIngresarAdministrador)
+                    .addComponent(btnRegresar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jdpInicio)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jdpInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdpInicio, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jdpInicio)
         );
 
         pack();
@@ -149,9 +159,15 @@ public class inicioSesionAdministrador extends javax.swing.JInternalFrame {
     }
     }//GEN-LAST:event_btnIngresarAdministradorActionPerformed
 
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnRegresarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresarAdministrador;
+    private javax.swing.JButton btnRegresar;
     private javax.swing.JLabel jblContra;
     private javax.swing.JLabel jblEmail;
     private javax.swing.JLabel jblInicio;
