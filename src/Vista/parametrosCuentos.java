@@ -210,24 +210,15 @@ public class parametrosCuentos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtPersonaje1ActionPerformed
 
     private void btnContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarActionPerformed
-        // TODO add your handling code here:
-        String nombrePersonaje1 = txtPersonaje1.getText();
-        String nombrePersonaje2 = txtPersonaje2.getText();
-
-        // Get the genre
-        String genero = cmbxGenero.getSelectedItem().toString();
-
-        // Get the scenario
-        String escenario = cmbxEscenario.getSelectedItem().toString();
-
+        opTerrorBosque oTB = new opTerrorBosque();
+        jdpParametros.add(oTB);
+        oTB.show();
         
-        opTerrorBosque opTB = new opTerrorBosque(nombrePersonaje1, nombrePersonaje2,genero,escenario);
-
-        // Start the game
-        opTB.add(opTB);
-
-        // Close the current window
-        this.btnContinuar()
+        if (oTB instanceof Object) {
+            Object object = (Object) oTB;
+            
+            
+        }
     }//GEN-LAST:event_btnContinuarActionPerformed
 
     private void btnRegresarPHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarPHActionPerformed

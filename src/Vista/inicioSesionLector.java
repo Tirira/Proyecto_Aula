@@ -155,9 +155,6 @@ public class inicioSesionLector extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCrearUsuarioActionPerformed
 
     private void btnIngresarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarUsuarioActionPerformed
-        menuLector mL = new menuLector();
-        jDesktopPane1.add(mL);
-        mL.show();
     }//GEN-LAST:event_btnIngresarUsuarioActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
